@@ -1,0 +1,235 @@
+<!doctype html>
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css">
+		<link rel="stylesheet" href="css/bootstrap-responsive.css">
+		<link rel="stylesheet" href="css/style.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<title>Exponet</title>
+
+        <script type="text/javascript">
+$(function(){
+
+    $('#ajax1').on('click', function(e){
+        e.preventDefault();
+      
+              $.ajax({
+              url: 'ajax1.html',
+              dataType: "html",
+              success: function(data) {
+          
+                $('#rezultat_ajaxa').html(data);
+   
+              },
+              error: function(){
+                 alert('neuspelo');
+              }
+            });
+    });
+
+    $('#ajax2').on('click', function(e){
+        e.preventDefault();
+      
+              $.ajax({
+              url: 'ajax2.html',
+              dataType: "html",
+              success: function(data) {
+          
+                $('#rezultat_ajaxa').html(data);
+   
+              },
+              error: function(){
+                 alert('neuspelo');
+              }, 
+            });
+    });
+
+    $('#home').on('click', function(){
+        
+        var voce = ['kruska', 'jabuka'];
+
+        // $.each(voce, function(index, value){
+
+
+        // });
+        $("#donji li").each(function(index, value) {
+            var tekst = $(value).text();
+            var pozicija = tekst.lastIndexOf(' '); //pozicija na kojoj pocinje poslednja rec
+            tekst = tekst.substring(0, pozicija);
+
+            $(value).children().text(tekst);
+            //console.log(tekst);
+
+
+        });
+    });
+
+});
+
+
+
+        </script>
+    </head>
+    <body>
+        <div id="wrap-header">
+        	<div class="content">
+        		<header class="row-fluid" id="header-height">
+        			<logo class="span3">
+        				<img src="images/logo.png" alt="logo">
+                       
+        			</logo>
+
+        			<nav class="span9">
+                 
+        				<ul class="navigation">
+        					<li><a class="selected" href="#" id="home">Home</a></li>
+        					<li><a href="#">Portfolio</a></li>
+        					<li><a href="#">Blog</a></li>
+        					<li><a href="#">Services</a></li>
+        					<li><a href="#">Case studies</a></li>
+        					<li><a href="#">Contact us</a></li>
+        				</ul>
+        			</nav>
+        		</header>		
+        	</div> 	
+        </div>
+        <div id="wrap">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="span12" id="form-margin">
+                        <form class="form-search" id="form-float">
+                            <input type="text" class="input-medium search-query search-img" placeholder="search...">
+                        </form>    
+                    </div>  
+                </div> 
+            </div>
+        </div>
+        <div id="wrap">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="span12" id="slider">
+                        <img src="images/slider.jpg" class="img-polaroid senka" alt="slider">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="wrap1">
+            <hr>
+            <div class="content">
+                <section class="section-content">
+                    <div class="row-fluid">
+                        <div class="span5">
+                            <article class="box-1">
+                                <h5>Connect With Your Clients</h5>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+                                <a href="#">Forest Nessit Allumn</a>
+                            </article>
+                            <article class="box-2">
+                                <h5>Editing Made Easy</h5>
+                                <p>Ut enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                                <a href="#">Nessit Allumn</a>
+                            </article>
+                        </div>
+                        <div class="span6 offset1">
+                            <article class="box-3">
+                                <h5>What We Are All About At </h5>
+                                <p>Lorem ipsum dolor sit amet, ctur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad veniam. Nevus magnu wuisit abre. Sed dest enim sit amet laborest doorest at dolor ajorem magna.</p>
+                                <a href="#">Sed Ut Perspiciatis Unde</a>
+                                <img style="margin-top:30px;" src="images/line.png" alt="line">
+                            </article>
+                            <article class="box-4">
+                                <h5>ExponetWorking for Your Clients</h5>
+                                <p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.</p>
+                                <ul>
+                                    <li>Web Designers</li>
+                                    <li>Ad Agencies</li>
+                                    <li>Small Firms</li>
+                                    <li>Bloggers</li>
+                                    <li>Programmers</li>
+                                    <li>New Clients</li>
+                                </ul>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+                <a href="#" id="ajax1">AJAX 1</a> | <a href="#" id="ajax2">AJAX 1</a>
+                <div id="rezultat_ajaxa"></div>
+            </div>
+        </div>
+        <div id="wrap2">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="span12" id="slider-footer">
+                        <h4>Featured Clients</h4>
+                        <img src="images/bottom-slider.png" alt="bottom-slider">
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div id="wrap-footer">
+            <div class="hr"> 
+                <div class="content">
+                    <section class="section-footer">
+                        <div class="row-fluid">
+                            <div class="span4">
+                                <aside class="footer-box-1">
+                                    <h3>Suggestions for <span>Exponet</span>?</h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. <br> <br> Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo est magna quisit.</p>
+                                    <a href="#">Make a Suggestion</a>
+                                </aside>
+                            </div>
+                            <div class="span4">
+                                <aside class="footer-box-2">
+                                    <h3>Latest From the <span>Blog</span></h3>
+                                    <ul id="donji">
+                                        <li><a href="#">Provus Attends Design Conference</a></li>
+                                        <li><a href="#">Business Apps Made Easy</a></li>
+                                        <li><a href="#">Interview With Provus President</a></li>
+                                        <li><a href="#">Programmers Unite</a></li>
+                                        <li><a href="#">Latest Client NuVorks Sounds Off</a></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                            <div class="span4" id="background-shadow">
+                                <aside class="footer-box-3">
+                                    <h3>Most Recent <span>Work</span></h3>
+                                    <ul>
+                                        <li><img src="images/screen-shots/1.png" alt="1"></li>
+                                        <li><img src="images/screen-shots/2.png" alt="2"></li>
+                                        <li><img src="images/screen-shots/3.png" alt="3"></li>
+                                        <li><img src="images/screen-shots/4.png" alt="4"></li>
+                                        <li><img src="images/screen-shots/5.png" alt="5"></li>
+                                        <li><img src="images/screen-shots/6.png" alt="6"></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="wrap-allrights">
+            <div class="content">
+                <div class="row-fluid copyright-margin">
+                    <div class="span3" id="copyright">
+                        <p>Copyright © 2009  All Rights Reserved</p>
+                    </div>
+                    <div class="span7 offset2">
+                        <nav class="nav-footer">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Case studies</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
