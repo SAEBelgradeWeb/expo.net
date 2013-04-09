@@ -33,6 +33,7 @@ body {
 
 .navigation li {
 	float:left;
+	margin-left:15px;
 }
 
 .navigation li a {
@@ -171,11 +172,6 @@ body {
 	padding-left:10px;
 }
 
-#slider-footer img {
-	-webkit-box-shadow: 0px -2px 5px 0px #9b9a92;
-	box-shadow: 0px -2px 5px 0px #9b9a92;
-}
-
 /*footer*/
 
 #wrap-footer {
@@ -259,7 +255,6 @@ body {
 	padding-top:6px;
 }
 
-
 #background-shadow {
 	background-image:url("../images/shadow.png");
 	background-repeat:no-repeat;
@@ -319,4 +314,124 @@ body {
 
 #forma {
 	display:none;
+}
+
+/*slider*/
+
+#slider-header {
+	width:939px;
+	overflow:hidden;
+	-webkit-box-shadow: 3px 3px 10px 2px #000;
+	box-shadow: 3px 3px 10px 2px #000;
+
+}
+
+#slider-header ul {
+	list-style-type:none;
+	margin:0px;
+	padding:0px;
+	width:5000px;
+	position: relative;
+}
+
+#slider-header li {
+	float:left;
+	position:relative;
+	width:939px;
+}
+
+.slider-info {
+	width:939px;
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background-color:black;
+	color:white;
+	font-family:20px;
+	opacity:0.6;
+	height:50px;
+	font-family:calibri;
+	font-weight:bold;
+}
+
+.slider-info h2 {
+	font-size:24px;
+	padding:0px;
+	margin:3px 0px 0px 20px;
+}
+
+
+/*slider-footer*/
+
+.slider-box {
+	width:960px;
+	height:196px;
+	margin:0px;
+	padding:0px;
+	background-color:#f6f6f6;
+	-webkit-box-shadow: 3px 3px 10px 2px #000;
+	box-shadow: 2px 2px 8px 1px #000;
+}
+
+.content-slider {
+	width:800px;
+	height:196px;
+	margin:0px;
+	padding:0px;
+	float:left;
+	overflow:hidden;
+}
+
+.content-slider ul {
+	list-style-type:none;
+	width:2000px;
+	height:126px;
+	position:relative;
+	left:0;
+	margin:45px 0 0 0;
+	padding:0px;
+}
+
+.content-slider li {
+	float:left;
+	width:175px;
+	margin:0px 12px 0px 12px;
+	padding:0px;
+}
+
+.content-slider li span {
+	display:block;
+	text-align:center;
+}
+
+.left-arrow {
+	width:80px;
+	height:196px;
+	margin:0px;
+	padding:0px;
+	float:left;
+}
+
+.left-arrow:hover {
+	cursor:pointer;
+}
+
+.left-arrow img {
+	margin:62px 0px 0px 20px;
+}
+
+.right-arrow {
+	width:80px;
+	height:196px;
+	margin:0px;
+	padding:0px;
+	float:right;
+}
+
+.right-arrow:hover {
+	cursor:pointer;
+}
+
+.right-arrow img {
+	margin:62px 0px 0px 20px;
 }

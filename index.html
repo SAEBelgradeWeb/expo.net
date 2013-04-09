@@ -7,70 +7,10 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
 		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
 		<title>Exponet</title>
 
-        <script type="text/javascript">
-$(function(){
 
-    $('#ajax1').on('click', function(e){
-        e.preventDefault();
-      
-              $.ajax({
-              url: 'ajax1.html',
-              dataType: "html",
-              success: function(data) {
-          
-                $('#rezultat_ajaxa').html(data);
-   
-              },
-              error: function(){
-                 alert('neuspelo');
-              }
-            });
-    });
-
-    $('#ajax2').on('click', function(e){
-        e.preventDefault();
-      
-              $.ajax({
-              url: 'ajax2.html',
-              dataType: "html",
-              success: function(data) {
-          
-                $('#rezultat_ajaxa').html(data);
-   
-              },
-              error: function(){
-                 alert('neuspelo');
-              }, 
-            });
-    });
-
-    $('#home').on('click', function(){
-        
-        var voce = ['kruska', 'jabuka'];
-
-        // $.each(voce, function(index, value){
-
-
-        // });
-        $("#donji li").each(function(index, value) {
-            var tekst = $(value).text();
-            var pozicija = tekst.lastIndexOf(' '); //pozicija na kojoj pocinje poslednja rec
-            tekst = tekst.substring(0, pozicija);
-
-            $(value).children().text(tekst);
-            //console.log(tekst);
-
-
-        });
-    });
-
-});
-
-
-
-        </script>
     </head>
     <body>
         <div id="wrap-header">
@@ -87,8 +27,6 @@ $(function(){
         					<li><a class="selected" href="#" id="home">Home</a></li>
         					<li><a href="#">Portfolio</a></li>
         					<li><a href="#">Blog</a></li>
-        					<li><a href="#">Services</a></li>
-        					<li><a href="#">Case studies</a></li>
         					<li><a href="#">Contact us</a></li>
         				</ul>
         			</nav>
@@ -109,8 +47,28 @@ $(function(){
         <div id="wrap">
             <div class="content">
                 <div class="row-fluid">
-                    <div class="span12" id="slider">
-                        <img src="images/slider.jpg" class="img-polaroid senka" alt="slider">
+                    <div class="span12" id="slider-header">
+                        <ul>
+                            <li>
+                                <img src="images/slider.jpg" alt="slider">
+                                <div class="slider-info">
+                                    <h2>Exponet</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/slider1.jpg" alt="slider">
+                                <div class="slider-info">
+                                    <h2>SAE Institut</h2>
+                                </div>
+                            </li>
+                            <li>
+                                <img src="images/slider1.jpg" alt="slider">
+                                <div class="slider-info">
+                                    <h2>SAE Institut2</h2>
+                                </div>
+                            </li>
+                        </ul>
+                        
                     </div>
                 </div>
             </div>
@@ -163,7 +121,26 @@ $(function(){
                 <div class="row-fluid">
                     <div class="span12" id="slider-footer">
                         <h4>Featured Clients</h4>
-                        <img src="images/bottom-slider.png" alt="bottom-slider">
+                        
+                        <div class="slider-box">
+                            <div class="left-arrow">
+                                <img src="images/left-arrow_03.png" alt="left-arrow">
+                            </div>
+                            <div class="content-slider">
+                                <ul>
+                                    <li><img src="images/1.jpg" alt="1"><span>Envato on Twitter</span></li>
+                                    <li><img src="images/2.jpg" alt="2"><span>MacApp Store</span></li>
+                                    <li><img src="images/3.jpg" alt="3"><span>PSD Tuts</span></li>
+                                    <li><img src="images/4.jpg" alt="4"><span>Creattica</span></li>
+                                    <li><img src="images/1.jpg" alt="1"><span>MacApp Store</span></li>
+                                    <li><img src="images/2.jpg" alt="2"><span>PSD Tuts</span></li>
+                                    <li><img src="images/3.jpg" alt="3"><span>Creattica</span></li>
+                                </ul>
+                            </div>
+                            <div class="right-arrow">
+                                <img src="images/right-arrow_03.png" alt="right-arrow">
+                            </div>
+                        </div>
                     </div>  
                 </div>
             </div>
