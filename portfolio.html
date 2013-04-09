@@ -1,0 +1,200 @@
+<!doctype html>
+
+<html>
+
+<head>
+	
+	<title></title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/bootstrap-responsive.css">
+	<link rel="stylesheet" href="css/style.css">
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/jquery.masonry.min.js"></script>
+
+	<script>
+		$(function(){
+  			$('#container').masonry({
+    		// options
+    			itemSelector : '.item',
+ 
+  			});
+
+  			$('.shedou').on('click', function() {
+  				$('.pokrivac').show();
+                $('.galerija').show();
+                $('.info').show();
+
+                var putanja = $(this).attr('src');
+                var velikaPutanja = putanja.substr(11);
+
+                $('.galerija').html('<img class="shedou" src="images/big/' + velikaPutanja  + '">');
+  			});
+
+            $('.pokrivac').on('click', function() {
+                $('.pokrivac').hide();
+                $('.galerija').hide();
+            });
+		});
+
+	
+	</script>
+
+
+</head>
+
+<body class="bodiii">
+
+	<!-- HEADER -->
+	<div id="wrap-header">
+        	<div class="content">
+                <!--<div class="row-fluid">-->
+        		    <header id="header-height" class="row-fluid">
+        			    <logo class="span3 logo">
+        				    <img src="images/logo.png" alt="logo">
+                       
+        			    </logo>
+
+        			    <nav class="span9">
+                 
+        				    <ul class="navigation">
+        					    <li><a href="index.html" id="home">Home</a></li>
+        					    <li><a class="selected" href="portfolio.html">Portfolio</a></li>
+        					    <li><a href="#">Blog</a></li>
+        					    <li><a href="#">Services</a></li>
+        					    <li><a href="#">Case studies</a></li>
+        					    <li><a href="#">Contact us</a></li>
+        				    </ul>
+        			    </nav>
+        		    </header>
+                <!--</div>-->	
+        	</div> 	
+    </div>
+    <!-- KRAJ HEADER-a -->
+
+    <!-- KONTEJNERCINA SA SLIKAMA -->
+    <div class="wrap">
+    	
+        <div class="row-fluid">
+                
+            <div class="span12">
+    	
+    		    <div id="container">
+  			
+  				     <div class="item"><a href="#"><img class='shedou' src="images/tmb/pot6.jpg" alt=""></a><a class="linkovi" href="#">www.visco.com</a></div>
+  				
+  				     <div class="item"><a href="#"><img class='shedou' src="images/tmb/pot2.jpg" alt=""></a><a class="linkovi" href="#">www.modeagency.org</a></div>
+  				
+  				     <div class="item"><a href="#"><img class='shedou' src="images/tmb/pot5.jpg" alt=""></a><a class="linkovi" href="#">www.agros.ba</a></div>
+  				
+  				     <div class="item"><a href="#"><img class='shedou' src="images/tmb/pot4.jpg" alt=""></a><a class="linkovi" href="#">www.infnbd.com</a></div>
+  				
+  				     <div class="item"><a href="#"><img class='shedou' src="images/tmb/pot3.jpg" alt=""></a><a class="linkovi" href="#">www.brouout.com</a></div>
+  				
+  				     <div class="item"><a href="#"><img class='shedou' src="images/tmb/pot1.jpg" alt=""></a><a class="linkovi" href="#">www.origami.com</a></div>
+		
+			    </div>
+            
+            </div>
+        
+        </div>    	
+    
+    </div>
+
+    <div class='pokrivac'>
+        
+        <div class="inner">
+            
+            <div class="galerija">
+        
+            </div>
+            
+        </div>
+    	
+    </div>
+    <!-- KRAJ KONTEJNERA -->
+
+    <!-- FOOTER -->
+    <div id="wrap2">
+            <div class="content">
+                <div class="row-fluid">
+                    <div class="span12" id="slider-footer">
+                        <h4>Featured Clients</h4>
+                        <img src="images/bottom-slider.png" alt="bottom-slider">
+                    </div>  
+                </div>
+            </div>
+        </div>
+        <div id="wrap-footer">
+            <div class="hr"> 
+                <div class="content">
+                    <section class="section-footer">
+                        <div class="row-fluid">
+                            <div class="span4">
+                                <aside class="footer-box-1">
+                                    <h3>Suggestions for <span>Exponet</span>?</h3>
+                                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam. <br> <br> Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo est magna quisit.</p>
+                                    <a href="#">Make a Suggestion</a>
+                                </aside>
+                            </div>
+                            <div class="span4">
+                                <aside class="footer-box-2">
+                                    <h3>Latest From the <span>Blog</span></h3>
+                                    <ul id="donji">
+                                        <li><a href="#">Provus Attends Design Conference</a></li>
+                                        <li><a href="#">Business Apps Made Easy</a></li>
+                                        <li><a href="#">Interview With Provus President</a></li>
+                                        <li><a href="#">Programmers Unite</a></li>
+                                        <li><a href="#">Latest Client NuVorks Sounds Off</a></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                            <div class="span4" id="background-shadow">
+                                <aside class="footer-box-3">
+                                    <h3>Most Recent <span>Work</span></h3>
+                                    <ul>
+                                        <li><img src="images/screen-shots/1.png" alt="1"></li>
+                                        <li><img src="images/screen-shots/2.png" alt="2"></li>
+                                        <li><img src="images/screen-shots/3.png" alt="3"></li>
+                                        <li><img src="images/screen-shots/4.png" alt="4"></li>
+                                        <li><img src="images/screen-shots/5.png" alt="5"></li>
+                                        <li><img src="images/screen-shots/6.png" alt="6"></li>
+                                    </ul>
+                                </aside>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+        <div id="wrap-allrights">
+            <div class="content">
+                <div class="row-fluid copyright-margin">
+                    <div class="span3" id="copyright">
+                        <p>Copyright © 2009  All Rights Reserved</p>
+                    </div>
+                    <div class="span7 offset2">
+                        <nav class="nav-footer">
+                            <ul>
+                                <li><a href="#">Home</a></li>
+                                <li><a href="#">Portfolio</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Services</a></li>
+                                <li><a href="#">Case studies</a></li>
+                                <li><a href="#">Contact us</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -435,3 +435,70 @@ body {
 .right-arrow img {
 	margin:62px 0px 0px 20px;
 }
+
+/* OVDE POCINJE SREDJIVANJE PORTFOLIA */
+
+.bodiii {
+	background-color: #E9E9DB;
+}
+
+#container {
+	margin-top: 40px;
+	margin:0 auto;
+	max-width:960px;
+	background-color: #E9E9DB;
+}
+
+.item {
+  width: 250px;
+  padding: 26px;
+  float: left;
+  text-align: center;
+}
+
+
+.item img {
+	padding: 8px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.linkovi {
+	color: #000;
+}
+
+.shedou {
+	-webkit-box-shadow: 3px 3px 10px 2px #000;
+	box-shadow: 3px 3px 10px 2px #A7A7A7;
+}
+
+.galerija {
+	display: none;
+	position: absolute !important;
+	z-index: 99999;
+	border-radius: 6px;
+	height: 600px !important;
+	width: 40%;
+	opacity: 1 !important;
+	margin-left: 10%;
+}
+
+.inner {
+	margin-top: 104px !important;
+	margin: 0 auto;
+	width: 700px;
+	height: 100%;
+}
+
+.pokrivac {
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 1410px;
+	position: absolute;
+	background-color: rgba(55, 58, 61, 0.7);
+	display: none;
+}
+
+/* KRAJ PORTFOLIA */
